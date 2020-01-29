@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+}
+
+.headerBg {
+  background-image: url("img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes fadeIn {
+  from {backdrop-filter: brightness(1000%)}
+  to {backdrop-filter: brightness(30%)}
+}
+
+.header {
+  height: 500px;
+  backdrop-filter: brightness(1000%) blur(5px);
+  animation-name: fadeIn;
+  animation-delay: 0.5s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;  
+}
+
+.header1 {
+  font-family: 'Uncial Antiqua';
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+}
+
+.header2 {
+  position: relative;
+  top: 47%;
+  transform: translateY(-50%);
+  font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+
+.headerBtn {
+  position: relative;
+  top: 53%;
+  transform: translateY(-50%);
+  font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 90%);
+  text-align: center;
+  height: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  transition: 0.4s;
+  overflow: hidden;
+  color: white;
+}
+
+nav h1 {
+  font-family: 'Uncial Antiqua';
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+}
+
+.mainBody {
+  margin: 45px;
+  font-size: 15.5px;
+  font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+}
+
+.btnTxt {
+  color: black;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.btnTxt:hover {
+
+}
