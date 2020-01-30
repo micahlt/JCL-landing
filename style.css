@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Uncial+Antiqua&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 * {
   margin: 0;
@@ -14,20 +15,22 @@ body {
   background-image: url("img/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: black 0 0 5px;
 }
 
 @keyframes fadeIn {
-  from {backdrop-filter: brightness(1000%)}
-  to {backdrop-filter: brightness(30%)}
+  from {-webkit-backdrop-filter: brightness(1000%);
+  backdrop-filter: brightness(1000%);}
+  to {-webkit-backdrop-filter: brightness(30%); backdrop-filter: brightness(30%);}
 }
 
 .header {
-  height: 500px;
-  backdrop-filter: brightness(1000%) blur(5px);
+  height: 100vh;
+  backdrop-filter: brightness(1000%);
   animation-name: fadeIn;
   animation-delay: 0.5s;
   animation-duration: 0.75s;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
 }
 
 .header1 {
@@ -54,22 +57,21 @@ body {
   position: relative;
   top: 53%;
   transform: translateY(-50%);
-  font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
   text-align: center;
   font-size: 12px;
-  color: white;
 }
 
 nav {
-  background-color: rgba(0, 0, 0, 90%);
+  background-color: rgba(0, 0, 0, 0%);
   text-align: center;
-  height: 0px;
+  height: 100px;
   position: fixed;
   width: 100%;
   z-index: 1;
   transition: 0.4s;
   overflow: hidden;
   color: white;
+  box-shadow: black 0 0 0px;
 }
 
 nav h1 {
@@ -79,23 +81,85 @@ nav h1 {
   top: 50%;
   transform: translateY(-50%);
   font-size: 40px;
+  opacity: 0;
 }
 
 .mainBody {
-  margin: 45px;
+  margin: 20px 140px 40px 140px;
   font-size: 15.5px;
   font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
 }
 
 .btnTxt {
+  font-size: 15px;
   color: black;
   text-decoration: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
   padding: 12px;
-  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  box-shadow: black 0 0 3px;
 }
 
 .btnTxt:hover {
+  background-color: black;
+  color: white;
+  box-shadow: white 0 0 3px;
+}
 
+.left-nav {
+  position: fixed;
+  top: 27px;
+  left: 30px;
+}
+
+.right-nav {
+  position: fixed;
+  top: 27px;
+  right: 30px;
+}
+
+.bigImg {
+  width: 100px;
+  display: block;
+  text-align: right;
+}
+
+.subheader {
+  color: #001941;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.inline-link {
+  text-decoration: none;
+  color: darkgray;8
+}
+
+@media screen and (max-width: 600px) {
+  .mainBody {
+    margin: 10px 20px 20px 20px;
+  }
+}
+
+.footer {
+  background-color: black;
+  color: darkgray;
+  font-family: 'Lato', sans-serif;
+}
+
+.footer p {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
 }
